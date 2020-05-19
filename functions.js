@@ -13,6 +13,12 @@ function reverseString(str) {
 }
 
 // Factorialize a Number
+function factorialize(num) {
+   var output = 1;
+   for (let i = 2; i <= num; i++) output *= i;
+   console.log(output);
+   return output;
+}
 
 // Find the Longest Word in a String
 
