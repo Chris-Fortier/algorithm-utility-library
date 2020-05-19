@@ -21,6 +21,17 @@ function factorialize(num) {
 }
 
 // Find the Longest Word in a String
+function findLongestWordLength(str) {
+   var lengthOfLongestWord = 0;
+   const words = str.split(" ");
+   for (let wordIndex in words) {
+      console.log(words[wordIndex]);
+      if (words[wordIndex].length > lengthOfLongestWord)
+         lengthOfLongestWord = words[wordIndex].length;
+   }
+   console.log(lengthOfLongestWord);
+   return lengthOfLongestWord;
+}
 
 // Return Largest Numbers in Arrays
 
