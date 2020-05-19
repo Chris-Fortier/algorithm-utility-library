@@ -49,7 +49,10 @@ function largestInEachSubarray(arr) {
 }
 
 // Confirm the Ending
-
+function confirmEnding(str, target) {
+   // checks if str ends with target
+   return str.slice(str.length - target.length) == target;
+}
 // Repeat a String Repeat a String
 
 // Truncate a String
