@@ -83,6 +83,10 @@ function findElement(arr, func = (num) => num % 2 === 0) {
 }
 
 // Boo who
+function booWho(bool) {
+   // Checks if the argument is a boolean value
+   return bool === true || bool === false;
+}
 
 // Title Case a Sentence
 
