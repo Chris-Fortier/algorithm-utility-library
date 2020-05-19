@@ -106,7 +106,14 @@ function titleCase(str) {
 }
 
 // Slice and Splice
-
+function frankenSplice(arr1, arr2, n) {
+   // This copies each element of the first array into the second array, in order, beginning inserting elements at index n of the second array.
+   const arr2Left = arr2.slice(0, n);
+   const arr2Right = arr2.slice(n);
+   const output = arr2Left.concat(arr1, arr2Right);
+   console.log(output);
+   return output;
+}
 // Falsy Bouncer
 
 // Where do I Belong
