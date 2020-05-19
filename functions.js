@@ -54,7 +54,15 @@ function confirmEnding(str, target) {
    return str.slice(str.length - target.length) == target;
 }
 // Repeat a String Repeat a String
-
+function repeatStringNumTimes(str, num) {
+   // This returns a new string that is str repeated num times.
+   let newStr = "";
+   for (let i = 0; i < num; i++) {
+      newStr += str;
+   }
+   console.log(newStr);
+   return newStr;
+}
 // Truncate a String
 
 // Finders Keepers
