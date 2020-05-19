@@ -89,6 +89,21 @@ function booWho(bool) {
 }
 
 // Title Case a Sentence
+function titleCase(str) {
+   // This makes each word of a given sentence start with a capital letter but makes the rest of the letters lowercase.
+   var words = str.split(" ");
+   console.log(str);
+   for (let wordIndex in words) {
+      // for each word
+      words[wordIndex] = words[wordIndex].toLowerCase(); // make word all lowercase first
+      words[wordIndex] =
+         words[wordIndex][0].toUpperCase() + words[wordIndex].slice(1); // make first letter capital
+      console.log(words[wordIndex]);
+   }
+   const newString = words.join(" ");
+   console.log(newString);
+   return newString;
+}
 
 // Slice and Splice
 
