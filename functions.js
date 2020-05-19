@@ -115,7 +115,10 @@ function frankenSplice(arr1, arr2, n) {
    return output;
 }
 // Falsy Bouncer
-
+function bouncer(arr) {
+   // This will remove all falsy values from an array.
+   return arr.filter((item) => Boolean(item));
+}
 // Where do I Belong
 
 // Mutations
