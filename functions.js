@@ -75,6 +75,12 @@ function truncateString(str, num) {
 }
 
 // Finders Keepers
+function findElement(arr, func = (num) => num % 2 === 0) {
+   // This looks through an array and returns the first element that passes the given function.
+   const newArr = arr.filter(func);
+   console.log(newArr);
+   return newArr[0];
+}
 
 // Boo who
 
