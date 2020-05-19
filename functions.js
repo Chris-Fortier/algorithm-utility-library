@@ -5,6 +5,12 @@ function convertToF(celsius) {
 }
 
 // Reverse a String
+function reverseString(str) {
+   var revStr = "";
+   for (let i = 0; i < str.length; i++) revStr += str[str.length - i - 1];
+   console.log(revStr);
+   return revStr;
+}
 
 // Factorialize a Number
 
