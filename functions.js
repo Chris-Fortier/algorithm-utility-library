@@ -53,6 +53,7 @@ function confirmEnding(str, target) {
    // checks if str ends with target
    return str.slice(str.length - target.length) == target;
 }
+
 // Repeat a String Repeat a String
 function repeatStringNumTimes(str, num) {
    // This returns a new string that is str repeated num times.
@@ -63,7 +64,15 @@ function repeatStringNumTimes(str, num) {
    console.log(newStr);
    return newStr;
 }
+
 // Truncate a String
+function truncateString(str, num) {
+   // This will return a truncated string with ... after it if its longer than num.
+   if (str.length > num) {
+      return str.slice(0, num) + "...";
+   }
+   return str;
+}
 
 // Finders Keepers
 
