@@ -143,7 +143,8 @@ function mutation(arr) {
    const firstArray = arr[0].toLowerCase();
    const secondArray = arr[1].toLowerCase();
    let result = true;
-   for (let letterIndex in secondArray) { // for every letter in the second arry
+   for (let letterIndex in secondArray) {
+      // for every letter in the second arry
       const letter = secondArray[letterIndex];
       // see if its in the first array
       console.log(letter, firstArray.indexOf(letter) != -1);
@@ -155,3 +156,30 @@ function mutation(arr) {
 }
 
 // Chunky Monkey
+function chunkArrayInGroups(arr, size) {
+   // This splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+
+   var newArray = [[]];
+   var newSubArrayWeAreOn = 0;
+   var indexWithinNewSubArray = 0;
+
+   for (
+      let originalIndex = 0;
+      originalIndex < arr.length;
+      originalIndex++
+   ) // iterate over every item in the original array
+   {
+      // console.log(originalIndex);
+      if (indexWithinNewSubArray >= size) {
+         // start a new subarray
+         newArray.push([]);
+         newSubArrayWeAreOn++;
+         indexWithinNewSubArray = 0;
+      }
+      newArray[newSubArrayWeAreOn].push(arr[originalIndex]);
+
+      indexWithinNewSubArray++;
+   }
+   console.log(newArray);
+   return newArray;
+}
