@@ -120,7 +120,38 @@ function bouncer(arr) {
    return arr.filter((item) => Boolean(item));
 }
 // Where do I Belong
+function getIndexToIns(arr, num) {
+   // This will return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted.
+
+   const sortedArray = arr.sort((a, b) => a - b); // sort in numerical order
+
+   console.log(arr, sortedArray, num);
+   for (let i = 0; i < sortedArray.length; i++) {
+      if (num <= sortedArray[i]) {
+         var lowestIndex = i;
+         console.log("return", lowestIndex);
+         return lowestIndex;
+      }
+   }
+   console.log("return", sortedArray.length);
+   return sortedArray.length;
+}
 
 // Mutations
+function mutation(arr) {
+   // This will return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+   const firstArray = arr[0].toLowerCase();
+   const secondArray = arr[1].toLowerCase();
+   let result = true;
+   for (let letterIndex in secondArray) { // for every letter in the second arry
+      const letter = secondArray[letterIndex];
+      // see if its in the first array
+      console.log(letter, firstArray.indexOf(letter) != -1);
+      if (firstArray.indexOf(letter) == -1) {
+         result = false;
+      }
+   }
+   return result;
+}
 
 // Chunky Monkey
